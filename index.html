@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Where in the World</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body id="Body">
+    <header>
+      <h1>Where in the World?</h1>
+      <div id="modeSelector">Dark Mode</div>
+    </header>
+    <main>
+      <section id="inputSec">
+        <input type="text" name="country" id="search" placeholder="Search for country..."/>
+        <div id="filterBar">
+        <div id="dropDown">Filter by country</div> 
+        <ion-icon name="chevron-down-outline" id="downArrow"></ion-icon>
+        <div id="opts"> 
+        <p  class="option">Africa</p>
+        <p class="option">Americas</p>
+        <p  class="option">Asia</p>
+        <p  class="option">Europe</p>
+        <p class="option">Oceania</p>
+        <p  class="option">All</p>
+      </div>
+     </div>
+      </section>
+      <!--home page-->
+      <section id="home">
+
+      </section>
+      <!--details of country-->
+      <section id="detailPage">
+        <div id="backNavBar">
+        <ion-icon name="arrow-back-outline" id="backArrow"></ion-icon><input type="button" value="Back" id="backBtn">
+        
+        </div>
+        <div id="detail">
+          <div id="imageContr"><img src="" alt="img" id="detail_Img">
+          </div>
+          <div id="detail_Info">
+            <h2 id="name">Belgium</h2>
+            <div id="countryInfo">
+            <p>Native Name: <span>-------</span></p>
+            <p>Top Level Domain: <span>-------</span></p>
+            <p>Population: <span>-------</span></p>
+            <p>Currencies: <span>-------</span></p>
+            <p>Region: <span>-------</span></p>
+            <p>Languages: <span>-------</span></p>
+            <p>Sub Region: <span>-------</span></p>
+            <p>Capital:<span>-------</span></p>
+            </div>
+          
+            <div id="BorderDetail">
+              <p>Border countries:</p>
+              <div id="BorderCountry">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
