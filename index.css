@@ -91,7 +91,7 @@ input[type="text"] {
   padding: 2% 5% 0% 5%;
   box-sizing: border-box;
   display:grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
   grid-template-rows: auto;
   grid-gap: 75px;
   position: static;
@@ -259,4 +259,42 @@ font-weight: 300;
 /* mode selector style*/
 #modeSelector{
   cursor: pointer;
+}
+
+
+/* css for 375px display*/
+@media screen and (max-width:375px) {
+   header h1, #modeSelector{
+    font-size: 1rem;
+   }
+   #home{
+    padding: 2% 10% 0% 10%;
+   }
+   #inputSec{
+    flex-direction: column;
+    height:auto;
+    margin-bottom: 10px;
+   }
+   #filterBar{
+    width: 50%;
+    height: 50px;
+   }
+   input[type=text]{
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+   }
+
+  /* css for detail page*/
+  #detail {
+    grid-template-columns: 1fr;
+    border:1px solid;
+  }
+  #detail #imageContr,#detail_Info{
+    border:1px solid red;
+  }
+  #detail #imageContr{
+    height: 200px;
+  }
 }

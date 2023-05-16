@@ -11,7 +11,8 @@ let borderCountry = document.getElementById("BorderCountry");
 let countryImage = document.getElementById("detail_Img");
 let backBtn = document.getElementById("backBtn");
 let modeSelector=document.getElementById("modeSelector");
-let Body=document.getElementById("Body")
+let Body=document.getElementById("Body");
+//let countryContainer=document.querySelectorAll(".country");
 //creating object of details of country for just readibilty
 let countryDetail = {
   country,
@@ -249,10 +250,13 @@ var mode="light";
 modeSelector.addEventListener("click",()=>{
   if(mode=="light"){
     Body.style.backgroundColor=" hsl(207, 26%, 17%)";
-   
+  /*  for(i=0;i<home.childElementCount;i++){
+      home.children[i].style.backgroundColor="hsl(209, 23%, 22%)";
+    }*/
     mode="dark";
   }else{
     Body.style.backgroundColor="  hsl(0, 0%, 98%)";
     mode="light";
   }
 })
+
