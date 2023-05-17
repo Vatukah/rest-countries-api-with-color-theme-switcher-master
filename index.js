@@ -12,6 +12,7 @@ let countryImage = document.getElementById("detail_Img");
 let backBtn = document.getElementById("backBtn");
 let modeSelector=document.getElementById("modeSelector");
 let Body=document.getElementById("Body");
+let header=document.getElementById("header");
 //let countryContainer=document.querySelectorAll(".country");
 //creating object of details of country for just readibilty
 let countryDetail = {
@@ -249,12 +250,31 @@ var mode="light";
 
 modeSelector.addEventListener("click",()=>{
   if(mode=="light"){
+    header.style.backgroundColor="hsl(209, 23%, 22%)";
+    header.style.boxShadow="0px 2px 4px 1px rgba(0,0,0,0.233)";
+    header.style.color="white";
+    search.style.backgroundColor="hsl(209, 23%, 22%)";
+    search.style.color="white";
+    search.style.boxShadow="0px 0px 4px 1px rgba(0,0,0,0.233)"
+    dropDown.style.backgroundColor="hsl(207, 26%, 17%)";
+    dropDownOption.style.backgroundColor="hsl(207, 26%, 17%)";
+    dropDown.style.color="white";
+    dropDownOption.style.color="white";
     Body.style.backgroundColor=" hsl(207, 26%, 17%)";
   /*  for(i=0;i<home.childElementCount;i++){
       home.children[i].style.backgroundColor="hsl(209, 23%, 22%)";
     }*/
     mode="dark";
   }else{
+    header.style.backgroundColor="hsl(0, 0%, 98%)";
+    header.style.color="black";
+    header.style.boxShadow="0px 2px 4px 1px rgba(128, 128, 128, 0.233)";
+    search.style.backgroundColor="hsl(0, 0%, 98%)";
+    search.style.boxShadow="0px 0px 4px 1px rgba(128, 128, 128, 0.233)";
+    dropDown.style.backgroundColor="hsl(0, 0%, 98%)";
+    dropDownOption.style.backgroundColor="hsl(0, 0%, 98%)";
+    dropDown.style.color="black";
+    dropDownOption.style.color="black";
     Body.style.backgroundColor="  hsl(0, 0%, 98%)";
     mode="light";
   }
