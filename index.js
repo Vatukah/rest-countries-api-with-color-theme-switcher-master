@@ -13,6 +13,7 @@ let backBtn = document.getElementById("backBtn");
 let modeSelector=document.getElementById("modeSelector");
 let Body=document.getElementById("Body");
 let header=document.getElementById("header");
+let moon =document.querySelectorAll(".icon-moon");
 //let countryContainer=document.querySelectorAll(".country");
 //creating object of details of country for just readibilty
 let countryDetail = {
@@ -250,6 +251,9 @@ var mode="light";
 
 modeSelector.addEventListener("click",()=>{
   if(mode=="light"){
+    //moon functionality
+    moon[0].style.stroke="white";
+    moon[0].style.fill="white";
     header.style.backgroundColor="hsl(209, 23%, 22%)";
     header.style.boxShadow="0px 2px 4px 1px rgba(0,0,0,0.233)";
     header.style.color="white";
@@ -266,6 +270,8 @@ modeSelector.addEventListener("click",()=>{
     }*/
     mode="dark";
   }else{
+    moon[0].style.stroke="black";
+    moon[0].style.fill="none";
     header.style.backgroundColor="hsl(0, 0%, 98%)";
     header.style.color="black";
     header.style.boxShadow="0px 2px 4px 1px rgba(128, 128, 128, 0.233)";
@@ -279,4 +285,5 @@ modeSelector.addEventListener("click",()=>{
     mode="light";
   }
 })
+
 
