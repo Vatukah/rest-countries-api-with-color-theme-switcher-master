@@ -14,7 +14,11 @@ let modeSelector=document.getElementById("modeSelector");
 let Body=document.getElementById("Body");
 let header=document.getElementById("header");
 let moon =document.querySelectorAll(".icon-moon");
+let span=document.querySelectorAll("span");
 //let countryContainer=document.querySelectorAll(".country");
+
+//userselected mode
+let selectedMode="country";
 //creating object of details of country for just readibilty
 let countryDetail = {
   country,
@@ -64,10 +68,11 @@ fetch("data.json")
   });
 
 function displayer(arr) {
+  
   for (i = 0; i < arr.length; i++) {
     //creating div element to contain each country
     let counrtyContainer = document.createElement("div");
-    counrtyContainer.classList = "country";
+    counrtyContainer.classList = selectedMode;
 
     //element to contain each country's flag
     let flag = document.createElement("img");
@@ -170,14 +175,10 @@ search.addEventListener("input", () => {
 });
 
 //detail functionality
-myArr.forEach((element) => {
-  element.addEventListener("click", () => {
-    alert("clicked" + element.children[0].innerHTML);
-  });
-});
+
 
 function eventOnDiv() {
-  let country = document.querySelectorAll(".country");
+  let country = document.querySelectorAll("."+selectedMode);
   if (country != null) {
     country.forEach((element) => {
       element.addEventListener("click", () => {
@@ -254,35 +255,47 @@ modeSelector.addEventListener("click",()=>{
     //moon functionality
     moon[0].style.stroke="white";
     moon[0].style.fill="white";
+    selectedMode="countryDark";
     header.style.backgroundColor="hsl(209, 23%, 22%)";
     header.style.boxShadow="0px 2px 4px 1px rgba(0,0,0,0.233)";
     header.style.color="white";
     search.style.backgroundColor="hsl(209, 23%, 22%)";
     search.style.color="white";
     search.style.boxShadow="0px 0px 4px 1px rgba(0,0,0,0.233)"
-    dropDown.style.backgroundColor="hsl(207, 26%, 17%)";
-    dropDownOption.style.backgroundColor="hsl(207, 26%, 17%)";
+    dropDown.style.backgroundColor="hsl(209, 23%, 22%)";
+    dropDown.style.boxShadow="0px 0px 4px 1px rgba(0, 0, 0, 0.233)";
+    dropDownOption.style.backgroundColor="hsl(209, 23%, 22%)";
+    dropDownOption.style.boxShadow="0px 0px 4px 1px rgba(0, 0, 0, 0.233)";
     dropDown.style.color="white";
     dropDownOption.style.color="white";
     Body.style.backgroundColor=" hsl(207, 26%, 17%)";
-  /*  for(i=0;i<home.childElementCount;i++){
-      home.children[i].style.backgroundColor="hsl(209, 23%, 22%)";
-    }*/
+  for(i=0;i<home.childElementCount;i++){
+      home.children[i].classList="countryDark";
+    }
+    details.style.color="white";
+  
     mode="dark";
   }else{
     moon[0].style.stroke="black";
     moon[0].style.fill="none";
+    selectedMode="country";
     header.style.backgroundColor="hsl(0, 0%, 98%)";
     header.style.color="black";
     header.style.boxShadow="0px 2px 4px 1px rgba(128, 128, 128, 0.233)";
     search.style.backgroundColor="hsl(0, 0%, 98%)";
     search.style.boxShadow="0px 0px 4px 1px rgba(128, 128, 128, 0.233)";
     dropDown.style.backgroundColor="hsl(0, 0%, 98%)";
+    dropDownOption.style.boxShadow="0px 0px 4px 1px  rgba(128, 128, 128, 0.233)"
+    dropDown.style.boxShadow="0px 0px 4px 1px rgba(128, 128, 128, 0.233)";
     dropDownOption.style.backgroundColor="hsl(0, 0%, 98%)";
     dropDown.style.color="black";
     dropDownOption.style.color="black";
     Body.style.backgroundColor="  hsl(0, 0%, 98%)";
     mode="light";
+    for(i=0;i<home.childElementCount;i++){
+      home.children[i].classList="country";
+    }
+    details.style.color="black";
   }
 })
 

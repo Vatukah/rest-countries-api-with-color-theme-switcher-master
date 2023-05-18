@@ -114,7 +114,7 @@ input[type="text"] {
   padding: 2% 5% 0% 5%;
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 0.5fr));
   grid-template-rows: auto;
   grid-gap: 75px;
   position: static;
@@ -132,8 +132,15 @@ input[type="text"] {
   border-radius: 10px;
   cursor: pointer;
 }
+.countryDark{
+  height: 320px;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.233);
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: hsl(209, 23%, 22%);
+}
 
-.country img {
+.country img, .countryDark img{
   margin: 0;
   padding: 0;
   width: 100%;
@@ -321,7 +328,7 @@ input[type="button"]:active {
 
 
 /* css for 375px display*/
-@media screen and (max-width:375px) {
+@media screen and (max-width:500px) {
 
   header h1,
   #modeSelector {
@@ -329,6 +336,7 @@ input[type="button"]:active {
   }
 
   #home {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     padding: 2% 10% 0% 10%;
   }
 
