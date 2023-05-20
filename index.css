@@ -429,6 +429,7 @@ input[type="button"]:active {
     position: absolute;
     top: 18px;
     left: calc(100vw - 90vw);
+
   }
 }
 
@@ -443,20 +444,15 @@ input[type="button"]:active {
   }
 
   #home {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     padding: 2% 10% 0% 10%;
   }
 
-  #inputSec {
+  /*#inputSec {
     flex-direction: column;
     height: auto;
     margin-bottom: 10px;
-  }
-
-  #filterBar {
-    width: 55%;
-    height: 50px;
-  }
+  }*/
 
   input[type="text"] {
     width: 100%;
@@ -467,24 +463,41 @@ input[type="button"]:active {
 
   /* css for detail page*/
   #detail {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 1.4fr;
+    grid-template-rows: 800px;
     grid-row-gap: 20px;
+    
     box-sizing: border-box;
   }
 
   #detail #imageContr,
   #detail_Info {
+
     box-sizing: border-box;
   }
 
   #detail #imageContr {
-    height: 200px;
+    height: 95%;
+    align-self: center;
+  }
+  #detail #imageContr img{
+    height: 100%;
   }
 
   #detail_Info {
-    margin: 0;
+    margin-left: 20px;
     padding: 0;
+  }
+  #detail_Info h2{
+    font-size: 4rem;
+ margin:50px 0px;
+  }
+  .country{
+    height: 500px;
+    font-size: 2rem;
+  }
+  .countryDetails{
+    margin-bottom: 20px;
   }
 
   #countryInfo {
@@ -492,7 +505,14 @@ input[type="button"]:active {
     grid-template-rows: auto;
     grid-row-gap: 0px;
     box-sizing: border-box;
+    font-size: 2.5rem;
   }
+  #countryInfo p{
+    margin-bottom:20px;
+  }
+  #countryInfo p span{
+    margin-left:20px;
+  } 
 
   #countryInfo :nth-child(3) {
     grid-row: 2/3;
@@ -512,32 +532,61 @@ input[type="button"]:active {
   }
 
   #BorderDetail {
-    flex-direction: column;
-    align-items: start;
+    width: 100%;
+    font-size: 2.5rem;
+    align-items: center;
   }
 
+
   #BorderDetail #BorderCountry {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 20px 20px;
-    grid-gap: 5px;
-    padding: 10px;
-    user-select: none;
-    overflow-y: hidden;
-    box-sizing: border-box;
+     width: 100%;
   }
 
   #BorderCountry p {
     width: 100%;
+    height: 100px;
+    font-size: 1.5rem;
     padding: 5px;
     box-sizing: border-box;
   }
 
   #searchIcon {
     position: absolute;
-    top: 18px;
-    left: calc(100vw - 90vw);
+    top: 50%;
+    left: 7%;
+    font-size: 2.5rem;
   }
+  input[type=text]{
+   width: 60%;
+   height: 100px;
+   font-size: 2.5rem;
+   border-radius: 20px;
+   padding-left: 5%;
+  }
+  #filterBar {
+    width: 20%;
+    height: 100px;
+    font-size: 2.5rem;
+    border-radius: 20px;
+  }
+  
+  #filterBar #dropDown{
+    font-size:2.5rem;
+    padding: 0px 30px 0px 30px;
+  }
+  #backBtn{
+   width: 200px;
+   height: 50px;
+   font-size: 2rem;
+   border-radius: 10px;
+  }
+  #backArrow{
+    font-size: 2rem;
+  }
+  #opts {
+    
+    top: 105px;
+    font-size: 2.5rem;
+  }
+  
 }
