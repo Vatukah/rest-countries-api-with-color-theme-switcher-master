@@ -188,9 +188,10 @@ input[type="text"] {
 #detail {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1.2fr;
   grid-template-rows: 450px;
   box-sizing: border-box;
+  border: 1px solid;
 }
 
 input[type="button"] {
@@ -259,6 +260,7 @@ input[type="button"]:active {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
+  border:1px solid;
 }
 
 #countryInfo :nth-last-child(1) {
@@ -266,14 +268,12 @@ input[type="button"]:active {
 }
 
 #BorderDetail {
-  width: 100%;
+  width: auto;
   display: flex;
   align-items: center;
   margin-top: 50px;
-}
-
-#BorderDetail p {
-  margin: 0;
+  box-sizing: border-box;
+  border:1px solid;
 }
 
 #BorderCountry {
@@ -287,6 +287,8 @@ input[type="button"]:active {
 }
 
 #BorderCountry p {
+  width:auto;
+  height:40px;
   display: flex;
   justify-content: center;
   align-items: center;
