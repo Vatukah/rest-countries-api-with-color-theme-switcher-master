@@ -170,7 +170,7 @@ options.forEach((element) => {
 });
 
 //search functionality
-search.addEventListener("change", () => {
+search.addEventListener("input", () => {
   while (home.firstChild) {
     home.removeChild(home.lastChild);
   }
