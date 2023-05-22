@@ -175,6 +175,13 @@ search.addEventListener("input", () => {
   while (home.firstChild) {
     home.removeChild(home.lastChild);
   }
+  
+  if(window.innerWidth>1000){
+  if(home.childElementCount<3){
+    home.style.gridTemplateColumns="repeat(auto-fit, minmax(350px, 0.3fr))";
+  }else{
+    home.style.gridTemplateColumns="repeat(auto-fit, minmax(350px, 1fr))";
+  }}
   var filtered = arrContainer.filter((element) => {
     var name = element.name;
     name = name.toLowerCase();
@@ -297,6 +304,7 @@ function darkMode() {
   details.style.color = "white";
   searchIcon.style.color = "white";
   backBtn.style.backgroundColor = "hsl(209, 23%, 22%)";
+  backBtn.style.boxShadow="0px 0px 4px 2px rgba(0, 0, 0, 0.233)";
   downArrow.style.color = "white";
 }
 
@@ -324,5 +332,7 @@ function lightMode() {
   details.style.color = "black";
   searchIcon.style.color = "black";
   backBtn.style.backgroundColor = "white";
+  backBtn.style.boxShadow="0px 0px 4px 2px rgba(128, 128, 128, 0.233)";
   downArrow.style.color = "black";
 }
+console.log(window.innerWidth)

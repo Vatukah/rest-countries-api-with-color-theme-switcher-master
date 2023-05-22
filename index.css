@@ -1,7 +1,9 @@
-* {
+*{
   margin: 0;
   padding: 0;
   font-family: "League Spartan", sans-serif;
+  border: 1px solid ;
+  box-sizing: border-box;
 }
 
 body {
@@ -22,7 +24,6 @@ header {
   z-index: 9;
   user-select: none;
 }
-
 #modeSelector {
   display: flex;
   align-items: center;
@@ -110,14 +111,15 @@ input[type="text"] {
   width: 100vw;
   height: calc(100vh - 200px);
   padding: 2% 5% 0% 5%;
-  box-sizing: border-box;
+ 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 0.5fr));
   grid-template-rows: auto;
   grid-gap: 75px;
   position: static;
   overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-x: hidden; 
+  box-sizing: border-box;
 }
 
 #home::-webkit-scrollbar {
@@ -179,7 +181,7 @@ input[type="text"] {
 
 #detailPage {
   width: 100vw;
-  height: calc(100vh - 50px);
+  height: auto;
   padding: 2% 5% 0% 5%;
   box-sizing: border-box;
   display: none;
@@ -188,10 +190,10 @@ input[type="text"] {
 #detail {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr 1.3fr;
   grid-template-rows: 450px;
   box-sizing: border-box;
-  border: 1px solid;
+  
 }
 
 input[type="button"] {
@@ -260,7 +262,6 @@ input[type="button"]:active {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  border:1px solid;
 }
 
 #countryInfo :nth-last-child(1) {
@@ -268,12 +269,11 @@ input[type="button"]:active {
 }
 
 #BorderDetail {
-  width: auto;
+  width: 100%;
   display: flex;
   align-items: center;
   margin-top: 50px;
   box-sizing: border-box;
-  border:1px solid;
 }
 
 #BorderCountry {
@@ -283,6 +283,7 @@ input[type="button"]:active {
   padding: 10px;
   user-select: none;
   overflow-x: auto;
+  flex-grow: 0;
   flex-shrink: 2;
 }
 
@@ -337,6 +338,7 @@ input[type="button"]:active {
   #home {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     padding: 2% 10% 0% 10%;
+    box-sizing: border-box;
   }
 
   #inputSec {
@@ -413,7 +415,6 @@ input[type="button"]:active {
     height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 20px 20px;
     grid-gap: 5px;
     padding: 10px;
     user-select: none;
@@ -444,17 +445,17 @@ input[type="button"]:active {
   header{
     height: 100px;
   }
-
   #home {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     padding: 2% 10% 0% 10%;
+    height: calc(100vh - 400px);
   }
 
-  /*#inputSec {
-    flex-direction: column;
-    height: auto;
-    margin-bottom: 10px;
-  }*/
+#inputSec {
+    margin: 100px 0px;
+    top: 200px;
+    
+  }
 
   input[type="text"] {
     width: 100%;
@@ -466,9 +467,8 @@ input[type="button"]:active {
   /* css for detail page*/
   #detail {
     grid-template-columns: 1fr 1.4fr;
-    grid-template-rows: 800px;
+    grid-template-rows: 60vh;
     grid-row-gap: 20px;
-    
     box-sizing: border-box;
   }
 
@@ -501,10 +501,13 @@ input[type="button"]:active {
   .countryDetails{
     margin-bottom: 20px;
   }
+  .countryDark {
+    height: 500px;
+    font-size: 2rem;
+  }
 
   #countryInfo {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    
     grid-row-gap: 0px;
     box-sizing: border-box;
     font-size: 2.5rem;
@@ -516,22 +519,7 @@ input[type="button"]:active {
     margin-left:20px;
   } 
 
-  #countryInfo :nth-child(3) {
-    grid-row: 2/3;
-  }
 
-  #countryInfo :nth-child(5) {
-    grid-row: 3/4;
-  }
-
-  #countryInfo :nth-child(7) {
-    grid-row: 4/5;
-  }
-
-  #countryInfo :nth-last-child(1) {
-    grid-row: 5/6;
-    margin-bottom: 20px;
-  }
 
   #BorderDetail {
     width: 100%;
@@ -591,4 +579,9 @@ input[type="button"]:active {
     font-size: 2.5rem;
   }
   
+  .icon-moon {
+    width: 100px;
+    height: 100px;
+    
+  }
 }
