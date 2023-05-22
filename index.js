@@ -22,7 +22,6 @@ let mode;
 //upadating  classlist of countryDiv
 let selectedMode = "country";
 storedMode = window.localStorage.getItem("mode");
-//let countryContainer=document.querySelectorAll(".country");
 //fetching the user's selected mode
 if (storedMode == "light") {
   lightMode();

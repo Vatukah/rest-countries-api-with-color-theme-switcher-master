@@ -1,8 +1,8 @@
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: "League Spartan", sans-serif;
-  border: 1px solid ;
+
   box-sizing: border-box;
 }
 
@@ -13,7 +13,7 @@ body {
 header {
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 50px;
   box-shadow: 0px 2px 4px 1px rgba(128, 128, 128, 0.233);
   padding: 0% 5% 0% 5%;
@@ -34,7 +34,7 @@ header {
 }
 
 #inputSec {
-  width: 100vw;
+  width: 100%;
   height: 50px;
   display: flex;
   justify-content: space-between;
@@ -108,17 +108,17 @@ input[type="text"] {
 }
 
 #home {
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 200px);
   padding: 2% 5% 0% 5%;
- 
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 0.5fr));
   grid-template-rows: auto;
   grid-gap: 75px;
   position: static;
   overflow-y: scroll;
-  overflow-x: hidden; 
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 
@@ -180,7 +180,7 @@ input[type="text"] {
 }
 
 #detailPage {
-  width: 100vw;
+  width: 100%;
   height: auto;
   padding: 2% 5% 0% 5%;
   box-sizing: border-box;
@@ -193,7 +193,6 @@ input[type="text"] {
   grid-template-columns: 1fr 1.3fr;
   grid-template-rows: 450px;
   box-sizing: border-box;
-  
 }
 
 input[type="button"] {
@@ -288,8 +287,8 @@ input[type="button"]:active {
 }
 
 #BorderCountry p {
-  width:auto;
-  height:40px;
+  width: auto;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -432,17 +431,16 @@ input[type="button"]:active {
     position: absolute;
     top: 18px;
     left: calc(100vw - 90vw);
-
   }
 }
 
 /* css for screen size greater than 1440px display*/
-@media screen and  (min-width:1480px) {
+@media screen and (min-width: 1480px) {
   header h1,
   #modeSelector {
     font-size: 4rem;
   }
-  header{
+  header {
     height: 100px;
   }
   #home {
@@ -451,10 +449,9 @@ input[type="button"]:active {
     height: calc(100vh - 400px);
   }
 
-#inputSec {
+  #inputSec {
     margin: 100px 0px;
     top: 200px;
-    
   }
 
   input[type="text"] {
@@ -474,31 +471,30 @@ input[type="button"]:active {
 
   #detail #imageContr,
   #detail_Info {
-
+    align-self: center;
     box-sizing: border-box;
   }
 
   #detail #imageContr {
     height: 95%;
-    align-self: center;
   }
-  #detail #imageContr img{
-    height: 100%;
+  #detail #imageContr img {
+    height: 80%;
   }
 
   #detail_Info {
     margin-left: 20px;
     padding: 0;
   }
-  #detail_Info h2{
+  #detail_Info h2 {
     font-size: 4rem;
- margin:50px 0px;
+    margin: 50px 0px;
   }
-  .country{
+  .country {
     height: 500px;
     font-size: 2rem;
   }
-  .countryDetails{
+  .countryDetails {
     margin-bottom: 20px;
   }
   .countryDark {
@@ -507,19 +503,16 @@ input[type="button"]:active {
   }
 
   #countryInfo {
-    
     grid-row-gap: 0px;
     box-sizing: border-box;
     font-size: 2.5rem;
   }
-  #countryInfo p{
-    margin-bottom:20px;
+  #countryInfo p {
+    margin-bottom: 20px;
   }
-  #countryInfo p span{
-    margin-left:20px;
-  } 
-
-
+  #countryInfo p span {
+    margin-left: 20px;
+  }
 
   #BorderDetail {
     width: 100%;
@@ -527,9 +520,8 @@ input[type="button"]:active {
     align-items: center;
   }
 
-
   #BorderDetail #BorderCountry {
-     width: 100%;
+    width: 100%;
   }
 
   #BorderCountry p {
@@ -546,12 +538,12 @@ input[type="button"]:active {
     left: 7%;
     font-size: 2.5rem;
   }
-  input[type=text]{
-   width: 60%;
-   height: 100px;
-   font-size: 2.5rem;
-   border-radius: 20px;
-   padding-left: 5%;
+  input[type="text"] {
+    width: 60%;
+    height: 100px;
+    font-size: 2.5rem;
+    border-radius: 20px;
+    padding-left: 5%;
   }
   #filterBar {
     width: 20%;
@@ -559,29 +551,27 @@ input[type="button"]:active {
     font-size: 2.5rem;
     border-radius: 20px;
   }
-  
-  #filterBar #dropDown{
-    font-size:2.5rem;
+
+  #filterBar #dropDown {
+    font-size: 2.5rem;
     padding: 0px 30px 0px 30px;
   }
-  #backBtn{
-   width: 200px;
-   height: 50px;
-   font-size: 2rem;
-   border-radius: 10px;
+  #backBtn {
+    width: 200px;
+    height: 50px;
+    font-size: 2rem;
+    border-radius: 10px;
   }
-  #backArrow{
+  #backArrow {
     font-size: 2rem;
   }
   #opts {
-    
     top: 105px;
     font-size: 2.5rem;
   }
-  
+
   .icon-moon {
     width: 100px;
     height: 100px;
-    
   }
 }
